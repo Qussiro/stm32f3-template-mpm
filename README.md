@@ -1,4 +1,4 @@
-# STM32F0-Discovery Application Template
+# STM32F0-Discovery Application Template (Base for STM32F3-Discovery, README is not Changed)
 
 This is a template for quick-starting a project for
     [STM32F072B Discovery](https://www.st.com/en/evaluation-tools/32f072bdiscovery.html)

@@ -5,7 +5,7 @@ SYMBOL TABLE:
 08000000 l    d  .isr_vector	00000000 .isr_vector
 08000188 l    d  .text	00000000 .text
 20000000 l    d  .data	00000000 .data
-20000028 l    d  .bss	00000000 .bss
+20000150 l    d  .bss	00000000 .bss
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
 00000000 l    d  .debug_aranges	00000000 .debug_aranges
@@ -17,217 +17,233 @@ SYMBOL TABLE:
 00000000 l    d  .debug_line_str	00000000 .debug_line_str
 00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
 00000000 l    d  .debug_loclists	00000000 .debug_loclists
-00000000 l    df *ABS*	00000000 ccsHZPYc.o
-08000ea8 l       .text	00000000 LoopCopyDataInit
-08000ea0 l       .text	00000000 CopyDataInit
-08000ebc l       .text	00000000 LoopFillZerobss
-08000eb6 l       .text	00000000 FillZerobss
-08000ee0 l       .text	00000000 Infinite_Loop
+00000000 l    df *ABS*	00000000 ccSaJYUk.o
+08000ef4 l       .text	00000000 LoopCopyDataInit
+08000eec l       .text	00000000 CopyDataInit
+08000f08 l       .text	00000000 LoopFillZerobss
+08000f02 l       .text	00000000 FillZerobss
+08000f2c l       .text	00000000 Infinite_Loop
 00000000 l    df *ABS*	00000000 stm32f3_discovery.c
 00000000 l    df *ABS*	00000000 stm32f30x_exti.c
 00000000 l    df *ABS*	00000000 stm32f30x_gpio.c
 00000000 l    df *ABS*	00000000 stm32f30x_misc.c
 00000000 l    df *ABS*	00000000 stm32f30x_rcc.c
-08001118 l     O .text	00000010 APBAHBPrescTable
-08001128 l     O .text	0000001a ADCPrescTable
+08001354 l     O .text	00000010 APBAHBPrescTable
+08001364 l     O .text	0000001a ADCPrescTable
 00000000 l    df *ABS*	00000000 stm32f30x_syscfg.c
+00000000 l    df *ABS*	00000000 rand.c
 00000000 l    df *ABS*	00000000 system_stm32f30x.c
 00000000 l    df *ABS*	00000000 stm32f30x_it.c
 00000000 l    df *ABS*	00000000 main.c
-20000028 l     O .bss	00000004 TimingDelay
 00000000 l    df *ABS*	00000000 crti.o
 00000000 l    df *ABS*	00000000 crtn.o
-08000ee0  w    F .text	00000002 RTC_Alarm_IRQHandler
-08000ee0  w    F .text	00000002 TIM8_TRG_COM_IRQHandler
+00000000 l    df *ABS*	00000000 impure.c
+00000000 l    df *ABS*	00000000 findfp.c
+08000f2c  w    F .text	00000002 RTC_Alarm_IRQHandler
+08000f2c  w    F .text	00000002 TIM8_TRG_COM_IRQHandler
 08000188 g     F .text	0000003c STM_EVAL_LEDInit
 08000d54 g     F .text	00000028 SYSCFG_DeInit
 080007d4 g     F .text	0000000c RCC_HSICmd
-08000ee0  w    F .text	00000002 TIM8_CC_IRQHandler
+08000f2c  w    F .text	00000002 TIM8_CC_IRQHandler
 08000800 g     F .text	00000018 RCC_LSEDriveConfig
 0800083c g     F .text	0000000c RCC_PLLCmd
-08000fe8 g     F .text	00000002 DebugMon_Handler
+08001034 g     F .text	00000002 DebugMon_Handler
 08000c7c g     F .text	00000018 RCC_AHBPeriphResetCmd
 08000e7c g     F .text	00000010 SYSCFG_GetFlagStatus
 08000648 g     F .text	00000026 GPIO_PinAFConfig
 08000d48 g     F .text	0000000c RCC_ClearITPendingBit
 0800061c g     F .text	0000000c GPIO_ReadOutputDataBit
-08000ee0  w    F .text	00000002 TIM1_CC_IRQHandler
-08000fde g     F .text	00000002 HardFault_Handler
+08000f2c  w    F .text	00000002 TIM1_CC_IRQHandler
+0800102a g     F .text	00000002 HardFault_Handler
 0800021c g     F .text	00000070 STM_EVAL_PBInit
-08000ee0  w    F .text	00000002 USB_HP_IRQHandler
-08000fec g     F .text	00000004 SysTick_Handler
+08000f2c  w    F .text	00000002 USB_HP_IRQHandler
+08001038 g     F .text	00000004 SysTick_Handler
 08000868 g     F .text	0000000c RCC_MCOConfig
 08000684 g     F .text	0000005c NVIC_Init
-08000ee0  w    F .text	00000002 PVD_IRQHandler
-0800115c g       .text	00000000 _sidata
-08000fea g     F .text	00000002 PendSV_Handler
-08000fdc g     F .text	00000002 NMI_Handler
-2000002c g       .bss	00000000 __exidx_end
-08000ee0  w    F .text	00000002 EXTI3_IRQHandler
+08000f2c  w    F .text	00000002 PVD_IRQHandler
+08001398 g       .text	00000000 _sidata
+08001036 g     F .text	00000002 PendSV_Handler
+08001028 g     F .text	00000002 NMI_Handler
+200002d4 g       .bss	00000000 __exidx_end
+08000f2c  w    F .text	00000002 EXTI3_IRQHandler
 08000cc4 g     F .text	00000018 RCC_ITConfig
 08000e04 g     F .text	0000001c SYSCFG_ITConfig
-0800115c g       .text	00000000 _etext
-20000028 g       .bss	00000000 _sbss
+20000288 g     O .bss	00000004 __stdio_exit_handler
+08001398 g       .text	00000000 _etext
+20000150 g       .bss	00000000 _sbss
 08000e5c g     F .text	00000010 SYSCFG_BypassParityCheckDisable
 08000874 g     F .text	00000014 RCC_SYSCLKConfig
+080011e0 g     F .text	0000002e ToggleRandomLEDs
 080002a4 g     F .text	00000034 EXTI_DeInit
 0800078c g     F .text	00000034 RCC_WaitForHSEStartUp
 20000020 g     O .data	00000004 BUTTON_PORT
 08000c28 g     F .text	0000000c RCC_BackupResetCmd
 080006e0 g     F .text	00000014 NVIC_SetVectorTable
 0800085c g     F .text	0000000c RCC_ClockSecuritySystemCmd
-08000ee0  w    F .text	00000002 EXTI0_IRQHandler
-08000ee0  w    F .text	00000002 I2C2_EV_IRQHandler
+080012ec g     F .text	00000020 EXTI0_IRQHandler
+08000f2c  w    F .text	00000002 I2C2_EV_IRQHandler
 08000d24 g     F .text	00000010 RCC_ClearFlag
-08001110 g     O .text	00000004 BUTTON_CLK
-08000ee0  w    F .text	00000002 FPU_IRQHandler
-20000024 g     O .data	00000004 SystemCoreClock
-08000ee0  w    F .text	00000002 EXTI2_TS_IRQHandler
-08000ee0  w    F .text	00000002 TIM1_UP_TIM16_IRQHandler
+0800134c g     O .text	00000004 BUTTON_CLK
+08000f2c  w    F .text	00000002 FPU_IRQHandler
+08000f2c  w    F .text	00000002 EXTI2_TS_IRQHandler
+08000f2c  w    F .text	00000002 TIM1_UP_TIM16_IRQHandler
 0800077c g     F .text	00000010 RCC_HSEConfig
-08000fe4 g     F .text	00000002 UsageFault_Handler
+2000028c g     O .bss	00000001 currentState
+08001030 g     F .text	00000002 UsageFault_Handler
 08000c4c g     F .text	00000018 RCC_APB2PeriphClockCmd
-08000ee0  w    F .text	00000002 ADC1_2_IRQHandler
+08000f2c  w    F .text	00000002 ADC1_2_IRQHandler
 08000550 g     F .text	00000098 GPIO_Init
 08000824 g     F .text	00000018 RCC_PLLConfig
 08000b38 g     F .text	00000020 RCC_ADCCLKConfig
-080010f0 g     O .text	00000010 GPIO_PIN
+0800132c g     O .text	00000010 GPIO_PIN
 20000000 g       .data	00000000 _sdata
-08000ee0  w    F .text	00000002 SPI1_IRQHandler
+08000f2c  w    F .text	00000002 SPI1_IRQHandler
 0800070c g     F .text	00000016 SysTick_CLKSourceConfig
 08000644 g     F .text	00000004 GPIO_Write
-08000ee0  w    F .text	00000002 TIM6_DAC_IRQHandler
+08000f2c  w    F .text	00000002 TIM6_DAC_IRQHandler
 08000628 g     F .text	00000006 GPIO_ReadOutputData
 080007e0 g     F .text	00000020 RCC_LSEConfig
 08000c1c g     F .text	0000000c RCC_RTCCLKCmd
-08000ee0  w    F .text	00000002 TIM8_UP_IRQHandler
+08000f2c  w    F .text	00000002 TIM8_UP_IRQHandler
 08000c64 g     F .text	00000018 RCC_APB1PeriphClockCmd
 08000d34 g     F .text	00000014 RCC_GetITStatus
-2000002c g       .bss	00000000 __exidx_start
-08000ee0  w    F .text	00000002 DMA2_Channel2_IRQHandler
+200002d4 g       .bss	00000000 __exidx_start
+08000f2c  w    F .text	00000002 DMA2_Channel2_IRQHandler
 08000c34 g     F .text	00000018 RCC_AHBPeriphClockCmd
-08000ee0  w    F .text	00000002 DMA1_Channel4_IRQHandler
-08001144 g     F .text	00000000 _init
-08000ee0  w    F .text	00000002 USART3_IRQHandler
+08000f2c  w    F .text	00000002 DMA1_Channel4_IRQHandler
+08001380 g     F .text	00000000 _init
+08000f2c  w    F .text	00000002 USART3_IRQHandler
 0800046c g     F .text	00000018 EXTI_ClearITPendingBit
-2000002c g       .bss	00000000 _ebss
-08000ee0  w    F .text	00000002 DMA1_Channel7_IRQHandler
-08000e9c  w    F .text	00000030 Reset_Handler
+20000294 g     O .bss	00000004 TimingDelay
+200002d4 g       .bss	00000000 _ebss
+08000f2c  w    F .text	00000002 DMA1_Channel7_IRQHandler
+08000ee8  w    F .text	00000030 Reset_Handler
 08000614 g     F .text	00000006 GPIO_ReadInputData
-08000ee0  w    F .text	00000002 CAN1_RX1_IRQHandler
-08000ee0  w    F .text	00000002 UART5_IRQHandler
+08000f2c  w    F .text	00000002 CAN1_RX1_IRQHandler
+08000f2c  w    F .text	00000002 UART5_IRQHandler
+20000290 g     O .bss	00000004 UserButtonPressed
 08000cdc g     F .text	00000048 RCC_GetFlagStatus
-08000ee0  w    F .text	00000002 ADC3_IRQHandler
+08000f2c  w    F .text	00000002 ADC3_IRQHandler
+20000150 g     O .bss	00000138 __sf
 08000de8 g     F .text	0000001c SYSCFG_I2CFastModePlusConfig
 08000e4c g     F .text	00000010 SYSCFG_BreakConfig
 08000630 g     F .text	00000004 GPIO_SetBits
-08000ee0  w    F .text	00000002 TIM4_IRQHandler
+08000f2c  w    F .text	00000002 TIM4_IRQHandler
 0800040c g     F .text	00000020 EXTI_GetFlagStatus
 08000888 g     F .text	00000010 RCC_GetSYSCLKSource
 08000638 g     F .text	0000000a GPIO_WriteBit
-08000ee0  w    F .text	00000002 DMA2_Channel1_IRQHandler
-08000ee0  w    F .text	00000002 I2C1_EV_IRQHandler
-08001114 g     O .text	00000002 BUTTON_PIN
+08000f2c  w    F .text	00000002 DMA2_Channel1_IRQHandler
+08000f2c  w    F .text	00000002 I2C1_EV_IRQHandler
+08001350 g     O .text	00000002 BUTTON_PIN
 080008d4 g     F .text	00000264 RCC_GetClocksFreq
-08000ee0  w    F .text	00000002 DMA1_Channel6_IRQHandler
-08000ee0  w    F .text	00000002 UART4_IRQHandler
-08000ee0  w    F .text	00000002 DMA2_Channel4_IRQHandler
+080010f6 g     F .text	00000076 ToggleLEDsHalfPattern
+08000f2c  w    F .text	00000002 DMA1_Channel6_IRQHandler
+08000f2c  w    F .text	00000002 UART4_IRQHandler
+08000f2c  w    F .text	00000002 DMA2_Channel4_IRQHandler
 080003ec g     F .text	00000020 EXTI_GenerateSWInterrupt
 20000000 g     O .data	00000020 GPIO_PORT
-08000ee0  w    F .text	00000002 TIM3_IRQHandler
-08000ee0  w    F .text	00000002 RCC_IRQHandler
-20000028 g       .bss	00000000 _bss
-08000ee0  w    F .text	00000002 DMA1_Channel1_IRQHandler
-08000ee0 g       .text	00000002 Default_Handler
-08000ee0  w    F .text	00000002 USBWakeUp_RMP_IRQHandler
+08000f2c  w    F .text	00000002 TIM3_IRQHandler
+08000f2c  w    F .text	00000002 RCC_IRQHandler
+20000150 g       .bss	00000000 _bss
+08000f2c  w    F .text	00000002 DMA1_Channel1_IRQHandler
+08000f2c g       .text	00000002 Default_Handler
+08000f2c  w    F .text	00000002 USBWakeUp_RMP_IRQHandler
 0800042c g     F .text	00000018 EXTI_ClearFlag
+08000eb0 g     F .text	00000038 rand
 08000c00 g     F .text	00000010 RCC_RTCCLKConfig
-08000ee0  w    F .text	00000002 EXTI15_10_IRQHandler
+08000f2c  w    F .text	00000002 EXTI15_10_IRQHandler
 080001e0 g     F .text	0000001c STM_EVAL_LEDOff
 08000e6c g     F .text	00000010 SYSCFG_SRAMWRPEnable
 080002d8 g     F .text	00000104 EXTI_Init
 08000634 g     F .text	00000004 GPIO_ResetBits
-08000ee0  w    F .text	00000002 TIM7_IRQHandler
-080010d0 g     O .text	00000020 GPIO_CLK
-08000ee0  w    F .text	00000002 EXTI9_5_IRQHandler
-08000ee0  w    F .text	00000002 TAMPER_STAMP_IRQHandler
-08000ee0  w    F .text	00000002 RTC_WKUP_IRQHandler
+08000f2c  w    F .text	00000002 TIM7_IRQHandler
+0800130c g     O .text	00000020 GPIO_CLK
+08000f2c  w    F .text	00000002 EXTI9_5_IRQHandler
+08000f2c  w    F .text	00000002 TAMPER_STAMP_IRQHandler
+08000f2c  w    F .text	00000002 RTC_WKUP_IRQHandler
 08000444 g     F .text	00000028 EXTI_GetITStatus
-08000ee0  w    F .text	00000002 SPI2_IRQHandler
+08000f2c  w    F .text	00000002 SPI2_IRQHandler
 08000d7c g     F .text	00000014 SYSCFG_MemoryRemapConfig
-08000fe0 g     F .text	00000002 MemManage_Handler
+0800102c g     F .text	00000002 MemManage_Handler
 080007c0 g     F .text	00000014 RCC_AdjustHSICalibrationValue
-08001008 g     F .text	000000b4 main
-08000fe6 g     F .text	00000002 SVC_Handler
-08000ee0  w    F .text	00000002 DMA2_Channel5_IRQHandler
+08001210 g     F .text	000000c8 main
+0800103c g     F .text	00000036 AllLEDsOff
+08000e9c g     F .text	00000014 srand
+08001032 g     F .text	00000002 SVC_Handler
+08000f2c  w    F .text	00000002 DMA2_Channel5_IRQHandler
 080008ac g     F .text	00000014 RCC_PCLK1Config
-08001104 g     O .text	00000001 BUTTON_PIN_SOURCE
+08001340 g     O .text	00000001 BUTTON_PIN_SOURCE
 080003dc g     F .text	0000000e EXTI_StructInit
-08000ee0  w    F .text	00000002 DMA1_Channel5_IRQHandler
+08000f2c  w    F .text	00000002 DMA1_Channel5_IRQHandler
 08000bf4 g     F .text	0000000c RCC_USBCLKConfig
-08000ee0  w    F .text	00000002 USB_LP_IRQHandler
-08000ee0  w    F .text	00000002 EXTI4_IRQHandler
-08000ee0  w    F .text	00000002 USB_LP_CAN1_RX0_IRQHandler
+08000f2c  w    F .text	00000002 USB_LP_IRQHandler
+08000f2c  w    F .text	00000002 EXTI4_IRQHandler
+08000f2c  w    F .text	00000002 USB_LP_CAN1_RX0_IRQHandler
 080008c0 g     F .text	00000014 RCC_PCLK2Config
-08000ee4 g     F .text	000000f8 SystemInit
+08000f30 g     F .text	000000f8 SystemInit
 08000484 g     F .text	000000cc GPIO_DeInit
-08001150 g     F .text	00000000 _fini
-08000ee0  w    F .text	00000002 TIM1_TRG_COM_TIM17_IRQHandler
-08000ee0  w    F .text	00000002 USB_HP_CAN1_TX_IRQHandler
+0800138c g     F .text	00000000 _fini
+08000f2c  w    F .text	00000002 TIM1_TRG_COM_TIM17_IRQHandler
+08000f2c  w    F .text	00000002 USB_HP_CAN1_TX_IRQHandler
 08000724 g     F .text	00000058 RCC_DeInit
-08000ee0  w    F .text	00000002 DMA1_Channel3_IRQHandler
+08000f2c  w    F .text	00000002 DMA1_Channel3_IRQHandler
 08000d90 g     F .text	00000018 SYSCFG_DMAChannelRemapConfig
-08000ee0  w    F .text	00000002 ADC4_IRQHandler
+20000028 g     O .data	00000004 _impure_ptr
+08000f2c  w    F .text	00000002 ADC4_IRQHandler
 080006f4 g     F .text	00000018 NVIC_SystemLPConfig
 08000dc4 g     F .text	00000018 SYSCFG_EncoderRemapConfig
-08000ee0  w    F .text	00000002 WWDG_IRQHandler
+08000f2c  w    F .text	00000002 WWDG_IRQHandler
 08000cac g     F .text	00000018 RCC_APB1PeriphResetCmd
 20000000 g       .data	00000000 _data
 08000848 g     F .text	00000014 RCC_PREDIV1Config
-08000ff0 g     F .text	00000018 Delay
+08001074 g     F .text	00000018 Delay
 0800028c g     F .text	00000018 STM_EVAL_PBGetState
-08000ee0  w    F .text	00000002 TIM2_IRQHandler
+08000f2c  w    F .text	00000002 TIM2_IRQHandler
 080005e8 g     F .text	0000000e GPIO_StructInit
 080001fc g     F .text	00000020 STM_EVAL_LEDToggle
 08000da8 g     F .text	0000001c SYSCFG_TriggerRemapConfig
-0800110c g     O .text	00000002 BUTTON_EXTI_LINE
-08000ee0  w    F .text	00000002 COMP7_IRQHandler
+08001348 g     O .text	00000002 BUTTON_EXTI_LINE
+08000f2c  w    F .text	00000002 COMP7_IRQHandler
 2000a000 g       *ABS*	00000000 _estack
-08000ee0  w    F .text	00000002 COMP1_2_3_IRQHandler
-08000ee0  w    F .text	00000002 EXTI1_IRQHandler
-20000028 g       .data	00000000 _edata
+08000f2c  w    F .text	00000002 COMP1_2_3_IRQHandler
+08000f2c  w    F .text	00000002 EXTI1_IRQHandler
+20000150 g       .data	00000000 _edata
 08000ddc g     F .text	0000000c SYSCFG_USBInterruptLineRemapCmd
-08000ee0  w    F .text	00000002 USART2_IRQHandler
+08000f2c  w    F .text	00000002 USART2_IRQHandler
 08000e20 g     F .text	0000002c SYSCFG_EXTILineConfig
-08000ee0  w    F .text	00000002 COMP4_5_6_IRQHandler
+08000f2c  w    F .text	00000002 COMP4_5_6_IRQHandler
+0800116c g     F .text	00000074 ToggleLEDsInCirclePattern
+0800108c g     F .text	0000006a ToggleLEDsInCircle
 08000000 g     O .isr_vector	00000000 g_pfnVectors
+20000298 g     O .bss	0000003c RCC_Clocks
 08000b98 g     F .text	0000005c RCC_USARTCLKConfig
-08000ee0  w    F .text	00000002 I2C2_ER_IRQHandler
-08000ee0  w    F .text	00000002 DMA1_Channel2_IRQHandler
+20000030 g     O .data	00000120 _impure_data
+08000f2c  w    F .text	00000002 I2C2_ER_IRQHandler
+08000f2c  w    F .text	00000002 DMA1_Channel2_IRQHandler
 08000b78 g     F .text	00000020 RCC_TIMCLKConfig
-080010bc g     F .text	00000014 TimingDelay_Decrement
-08000ee0  w    F .text	00000002 TIM8_BRK_IRQHandler
+080012d8 g     F .text	00000014 TimingDelay_Decrement
+08000f2c  w    F .text	00000002 TIM8_BRK_IRQHandler
 08000b58 g     F .text	00000020 RCC_I2CCLKConfig
-08000ee0  w    F .text	00000002 CAN1_SCE_IRQHandler
+08000f2c  w    F .text	00000002 CAN1_SCE_IRQHandler
 08000c10 g     F .text	0000000c RCC_I2SCLKConfig
-08001108 g     O .text	00000001 BUTTON_PORT_SOURCE
-08000ee0  w    F .text	00000002 FLASH_IRQHandler
+08001344 g     O .text	00000001 BUTTON_PORT_SOURCE
+08000f2c  w    F .text	00000002 FLASH_IRQHandler
 080005f8 g     F .text	00000010 GPIO_PinLockConfig
-08000fe2 g     F .text	00000002 BusFault_Handler
-08000ee0  w    F .text	00000002 USART1_IRQHandler
+0800102e g     F .text	00000002 BusFault_Handler
+08000f2c  w    F .text	00000002 USART1_IRQHandler
 08000818 g     F .text	0000000c RCC_LSICmd
-08000ee0  w    F .text	00000002 SPI3_IRQHandler
+08000f2c  w    F .text	00000002 SPI3_IRQHandler
 08000c94 g     F .text	00000018 RCC_APB2PeriphResetCmd
-08000ee0  w    F .text	00000002 I2C1_ER_IRQHandler
+08000f2c  w    F .text	00000002 I2C1_ER_IRQHandler
 08000670 g     F .text	00000014 NVIC_PriorityGroupConfig
 080001c4 g     F .text	0000001c STM_EVAL_LEDOn
 08000e8c g     F .text	00000010 SYSCFG_ClearFlag
-08001100 g     O .text	00000001 BUTTON_IRQn
+0800133c g     O .text	00000001 BUTTON_IRQn
 08000608 g     F .text	0000000c GPIO_ReadInputDataBit
-08000ee0  w    F .text	00000002 USBWakeUp_IRQHandler
+08000f2c  w    F .text	00000002 USBWakeUp_IRQHandler
 08000898 g     F .text	00000014 RCC_HCLKConfig
-08000ee0  w    F .text	00000002 DMA2_Channel3_IRQHandler
-08000ee0  w    F .text	00000002 TIM1_BRK_TIM15_IRQHandler
+08000f2c  w    F .text	00000002 DMA2_Channel3_IRQHandler
+08000f2c  w    F .text	00000002 TIM1_BRK_TIM15_IRQHandler
 
 
 
@@ -279,7 +295,7 @@ void STM_EVAL_LEDInit(Led_TypeDef Led)
  80001b2:	b003      	add	sp, #12
  80001b4:	bd30      	pop	{r4, r5, pc}
  80001b6:	bf00      	nop
- 80001b8:	080010d0 	.word	0x080010d0
+ 80001b8:	0800130c 	.word	0x0800130c
  80001bc:	20000000 	.word	0x20000000
  80001c0:	01000301 	.word	0x01000301
 
@@ -299,7 +315,7 @@ void STM_EVAL_LEDOn(Led_TypeDef Led)
 }
  80001d4:	4770      	bx	lr
  80001d6:	bf00      	nop
- 80001d8:	080010d0 	.word	0x080010d0
+ 80001d8:	0800130c 	.word	0x0800130c
  80001dc:	20000000 	.word	0x20000000
 
 080001e0 <STM_EVAL_LEDOff>:
@@ -318,7 +334,7 @@ void STM_EVAL_LEDOff(Led_TypeDef Led)
 }
  80001f0:	4770      	bx	lr
  80001f2:	bf00      	nop
- 80001f4:	080010d0 	.word	0x080010d0
+ 80001f4:	0800130c 	.word	0x0800130c
  80001f8:	20000000 	.word	0x20000000
 
 080001fc <STM_EVAL_LEDToggle>:
@@ -340,7 +356,7 @@ void STM_EVAL_LEDToggle(Led_TypeDef Led)
 }
  8000212:	4770      	bx	lr
  8000214:	20000000 	.word	0x20000000
- 8000218:	080010d0 	.word	0x080010d0
+ 8000218:	0800130c 	.word	0x0800130c
 
 0800021c <STM_EVAL_PBInit>:
   *     @arg BUTTON_MODE_EXTI: Button will be connected to EXTI line with interrupt
@@ -2059,7 +2075,7 @@ ErrorStatus RCC_WaitForHSEStartUp(void)
  8000b26:	e74a      	b.n	80009be <RCC_GetClocksFreq+0xea>
  8000b28:	40021000 	.word	0x40021000
  8000b2c:	007a1200 	.word	0x007a1200
- 8000b30:	08001118 	.word	0x08001118
+ 8000b30:	08001354 	.word	0x08001354
  8000b34:	003d0900 	.word	0x003d0900
 
 08000b38 <RCC_ADCCLKConfig>:
@@ -2740,563 +2756,882 @@ void SYSCFG_ClearFlag(uint32_t SYSCFG_Flag)
  8000e96:	bf00      	nop
  8000e98:	40010000 	.word	0x40010000
 
-08000e9c <Reset_Handler>:
+08000e9c <srand>:
+ 8000e9c:	4b03      	ldr	r3, [pc, #12]	@ (8000eac <srand+0x10>)
+ 8000e9e:	681b      	ldr	r3, [r3, #0]
+ 8000ea0:	2200      	movs	r2, #0
+ 8000ea2:	f8c3 0098 	str.w	r0, [r3, #152]	@ 0x98
+ 8000ea6:	f8c3 209c 	str.w	r2, [r3, #156]	@ 0x9c
+ 8000eaa:	4770      	bx	lr
+ 8000eac:	20000028 	.word	0x20000028
+
+08000eb0 <rand>:
+ 8000eb0:	4b0a      	ldr	r3, [pc, #40]	@ (8000edc <rand+0x2c>)
+ 8000eb2:	480b      	ldr	r0, [pc, #44]	@ (8000ee0 <rand+0x30>)
+ 8000eb4:	6819      	ldr	r1, [r3, #0]
+ 8000eb6:	4a0b      	ldr	r2, [pc, #44]	@ (8000ee4 <rand+0x34>)
+ 8000eb8:	f8d1 3098 	ldr.w	r3, [r1, #152]	@ 0x98
+ 8000ebc:	b510      	push	{r4, lr}
+ 8000ebe:	f8d1 409c 	ldr.w	r4, [r1, #156]	@ 0x9c
+ 8000ec2:	4358      	muls	r0, r3
+ 8000ec4:	fb02 0004 	mla	r0, r2, r4, r0
+ 8000ec8:	fba3 3202 	umull	r3, r2, r3, r2
+ 8000ecc:	3301      	adds	r3, #1
+ 8000ece:	eb40 0002 	adc.w	r0, r0, r2
+ 8000ed2:	e9c1 3026 	strd	r3, r0, [r1, #152]	@ 0x98
+ 8000ed6:	f020 4000 	bic.w	r0, r0, #2147483648	@ 0x80000000
+ 8000eda:	bd10      	pop	{r4, pc}
+ 8000edc:	20000028 	.word	0x20000028
+ 8000ee0:	5851f42d 	.word	0x5851f42d
+ 8000ee4:	4c957f2d 	.word	0x4c957f2d
+
+08000ee8 <Reset_Handler>:
   .weak  Reset_Handler
   .type  Reset_Handler, %function
 Reset_Handler:  
 
 /* Copy the data segment initializers from flash to SRAM */  
   movs  r1, #0
- 8000e9c:	2100      	movs	r1, #0
+ 8000ee8:	2100      	movs	r1, #0
   b  LoopCopyDataInit
- 8000e9e:	e003      	b.n	8000ea8 <LoopCopyDataInit>
+ 8000eea:	e003      	b.n	8000ef4 <LoopCopyDataInit>
 
-08000ea0 <CopyDataInit>:
+08000eec <CopyDataInit>:
 
 CopyDataInit:
   ldr  r3, =_sidata
- 8000ea0:	4b0a      	ldr	r3, [pc, #40]	@ (8000ecc <LoopFillZerobss+0x10>)
+ 8000eec:	4b0a      	ldr	r3, [pc, #40]	@ (8000f18 <LoopFillZerobss+0x10>)
   ldr  r3, [r3, r1]
- 8000ea2:	585b      	ldr	r3, [r3, r1]
+ 8000eee:	585b      	ldr	r3, [r3, r1]
   str  r3, [r0, r1]
- 8000ea4:	5043      	str	r3, [r0, r1]
+ 8000ef0:	5043      	str	r3, [r0, r1]
   adds  r1, r1, #4
- 8000ea6:	3104      	adds	r1, #4
+ 8000ef2:	3104      	adds	r1, #4
 
-08000ea8 <LoopCopyDataInit>:
+08000ef4 <LoopCopyDataInit>:
     
 LoopCopyDataInit:
   ldr  r0, =_sdata
- 8000ea8:	4809      	ldr	r0, [pc, #36]	@ (8000ed0 <LoopFillZerobss+0x14>)
+ 8000ef4:	4809      	ldr	r0, [pc, #36]	@ (8000f1c <LoopFillZerobss+0x14>)
   ldr  r3, =_edata
- 8000eaa:	4b0a      	ldr	r3, [pc, #40]	@ (8000ed4 <LoopFillZerobss+0x18>)
+ 8000ef6:	4b0a      	ldr	r3, [pc, #40]	@ (8000f20 <LoopFillZerobss+0x18>)
   adds  r2, r0, r1
- 8000eac:	1842      	adds	r2, r0, r1
+ 8000ef8:	1842      	adds	r2, r0, r1
   cmp  r2, r3
- 8000eae:	429a      	cmp	r2, r3
+ 8000efa:	429a      	cmp	r2, r3
   bcc  CopyDataInit
- 8000eb0:	d3f6      	bcc.n	8000ea0 <CopyDataInit>
+ 8000efc:	d3f6      	bcc.n	8000eec <CopyDataInit>
   ldr  r2, =_sbss
- 8000eb2:	4a09      	ldr	r2, [pc, #36]	@ (8000ed8 <LoopFillZerobss+0x1c>)
+ 8000efe:	4a09      	ldr	r2, [pc, #36]	@ (8000f24 <LoopFillZerobss+0x1c>)
   b  LoopFillZerobss
- 8000eb4:	e002      	b.n	8000ebc <LoopFillZerobss>
+ 8000f00:	e002      	b.n	8000f08 <LoopFillZerobss>
 
-08000eb6 <FillZerobss>:
+08000f02 <FillZerobss>:
 /* Zero fill the bss segment. */  
 FillZerobss:
   movs  r3, #0
- 8000eb6:	2300      	movs	r3, #0
+ 8000f02:	2300      	movs	r3, #0
   str  r3, [r2], #4
- 8000eb8:	f842 3b04 	str.w	r3, [r2], #4
+ 8000f04:	f842 3b04 	str.w	r3, [r2], #4
 
-08000ebc <LoopFillZerobss>:
+08000f08 <LoopFillZerobss>:
     
 LoopFillZerobss:
   ldr  r3, = _ebss
- 8000ebc:	4b07      	ldr	r3, [pc, #28]	@ (8000edc <LoopFillZerobss+0x20>)
+ 8000f08:	4b07      	ldr	r3, [pc, #28]	@ (8000f28 <LoopFillZerobss+0x20>)
   cmp  r2, r3
- 8000ebe:	429a      	cmp	r2, r3
+ 8000f0a:	429a      	cmp	r2, r3
   bcc  FillZerobss
- 8000ec0:	d3f9      	bcc.n	8000eb6 <FillZerobss>
+ 8000f0c:	d3f9      	bcc.n	8000f02 <FillZerobss>
 
 /* Call the clock system intitialization function.*/
   bl  SystemInit   
- 8000ec2:	f000 f80f 	bl	8000ee4 <SystemInit>
+ 8000f0e:	f000 f80f 	bl	8000f30 <SystemInit>
 /* Call the application's entry point.*/
   bl  main
- 8000ec6:	f000 f89f 	bl	8001008 <main>
+ 8000f12:	f000 f97d 	bl	8001210 <main>
   bx  lr    
- 8000eca:	4770      	bx	lr
+ 8000f16:	4770      	bx	lr
   ldr  r3, =_sidata
- 8000ecc:	0800115c 	.word	0x0800115c
+ 8000f18:	08001398 	.word	0x08001398
   ldr  r0, =_sdata
- 8000ed0:	20000000 	.word	0x20000000
+ 8000f1c:	20000000 	.word	0x20000000
   ldr  r3, =_edata
- 8000ed4:	20000028 	.word	0x20000028
+ 8000f20:	20000150 	.word	0x20000150
   ldr  r2, =_sbss
- 8000ed8:	20000028 	.word	0x20000028
+ 8000f24:	20000150 	.word	0x20000150
   ldr  r3, = _ebss
- 8000edc:	2000002c 	.word	0x2000002c
+ 8000f28:	200002d4 	.word	0x200002d4
 
-08000ee0 <ADC1_2_IRQHandler>:
+08000f2c <ADC1_2_IRQHandler>:
  * @retval None       
 */
     .section  .text.Default_Handler,"ax",%progbits
 Default_Handler:
 Infinite_Loop:
   b  Infinite_Loop
- 8000ee0:	e7fe      	b.n	8000ee0 <ADC1_2_IRQHandler>
+ 8000f2c:	e7fe      	b.n	8000f2c <ADC1_2_IRQHandler>
 	...
 
-08000ee4 <SystemInit>:
+08000f30 <SystemInit>:
   */
 void SystemInit(void)
 {
   /* FPU settings ------------------------------------------------------------*/
   #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
     SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
- 8000ee4:	4a38      	ldr	r2, [pc, #224]	@ (8000fc8 <SystemInit+0xe4>)
- 8000ee6:	f8d2 3088 	ldr.w	r3, [r2, #136]	@ 0x88
- 8000eea:	f443 0370 	orr.w	r3, r3, #15728640	@ 0xf00000
- 8000eee:	f8c2 3088 	str.w	r3, [r2, #136]	@ 0x88
+ 8000f30:	4a38      	ldr	r2, [pc, #224]	@ (8001014 <SystemInit+0xe4>)
+ 8000f32:	f8d2 3088 	ldr.w	r3, [r2, #136]	@ 0x88
+ 8000f36:	f443 0370 	orr.w	r3, r3, #15728640	@ 0xf00000
+ 8000f3a:	f8c2 3088 	str.w	r3, [r2, #136]	@ 0x88
   #endif
 
   /* Reset the RCC clock configuration to the default reset state ------------*/
   /* Set HSION bit */
   RCC->CR |= (uint32_t)0x00000001;
- 8000ef2:	4b36      	ldr	r3, [pc, #216]	@ (8000fcc <SystemInit+0xe8>)
- 8000ef4:	681a      	ldr	r2, [r3, #0]
- 8000ef6:	f042 0201 	orr.w	r2, r2, #1
- 8000efa:	601a      	str	r2, [r3, #0]
+ 8000f3e:	4b36      	ldr	r3, [pc, #216]	@ (8001018 <SystemInit+0xe8>)
+ 8000f40:	681a      	ldr	r2, [r3, #0]
+ 8000f42:	f042 0201 	orr.w	r2, r2, #1
+ 8000f46:	601a      	str	r2, [r3, #0]
 
   /* Reset CFGR register */
   RCC->CFGR &= 0xF87FC00C;
- 8000efc:	6859      	ldr	r1, [r3, #4]
- 8000efe:	4a34      	ldr	r2, [pc, #208]	@ (8000fd0 <SystemInit+0xec>)
- 8000f00:	400a      	ands	r2, r1
- 8000f02:	605a      	str	r2, [r3, #4]
+ 8000f48:	6859      	ldr	r1, [r3, #4]
+ 8000f4a:	4a34      	ldr	r2, [pc, #208]	@ (800101c <SystemInit+0xec>)
+ 8000f4c:	400a      	ands	r2, r1
+ 8000f4e:	605a      	str	r2, [r3, #4]
 
   /* Reset HSEON, CSSON and PLLON bits */
   RCC->CR &= (uint32_t)0xFEF6FFFF;
- 8000f04:	681a      	ldr	r2, [r3, #0]
- 8000f06:	f022 7284 	bic.w	r2, r2, #17301504	@ 0x1080000
- 8000f0a:	f422 3280 	bic.w	r2, r2, #65536	@ 0x10000
- 8000f0e:	601a      	str	r2, [r3, #0]
+ 8000f50:	681a      	ldr	r2, [r3, #0]
+ 8000f52:	f022 7284 	bic.w	r2, r2, #17301504	@ 0x1080000
+ 8000f56:	f422 3280 	bic.w	r2, r2, #65536	@ 0x10000
+ 8000f5a:	601a      	str	r2, [r3, #0]
 
   /* Reset HSEBYP bit */
   RCC->CR &= (uint32_t)0xFFFBFFFF;
- 8000f10:	681a      	ldr	r2, [r3, #0]
- 8000f12:	f422 2280 	bic.w	r2, r2, #262144	@ 0x40000
- 8000f16:	601a      	str	r2, [r3, #0]
+ 8000f5c:	681a      	ldr	r2, [r3, #0]
+ 8000f5e:	f422 2280 	bic.w	r2, r2, #262144	@ 0x40000
+ 8000f62:	601a      	str	r2, [r3, #0]
 
   /* Reset PLLSRC, PLLXTPRE, PLLMUL and USBPRE bits */
   RCC->CFGR &= (uint32_t)0xFF80FFFF;
- 8000f18:	685a      	ldr	r2, [r3, #4]
- 8000f1a:	f422 02fe 	bic.w	r2, r2, #8323072	@ 0x7f0000
- 8000f1e:	605a      	str	r2, [r3, #4]
+ 8000f64:	685a      	ldr	r2, [r3, #4]
+ 8000f66:	f422 02fe 	bic.w	r2, r2, #8323072	@ 0x7f0000
+ 8000f6a:	605a      	str	r2, [r3, #4]
 
   /* Reset PREDIV1[3:0] bits */
   RCC->CFGR2 &= (uint32_t)0xFFFFFFF0;
- 8000f20:	6ada      	ldr	r2, [r3, #44]	@ 0x2c
- 8000f22:	f022 020f 	bic.w	r2, r2, #15
- 8000f26:	62da      	str	r2, [r3, #44]	@ 0x2c
+ 8000f6c:	6ada      	ldr	r2, [r3, #44]	@ 0x2c
+ 8000f6e:	f022 020f 	bic.w	r2, r2, #15
+ 8000f72:	62da      	str	r2, [r3, #44]	@ 0x2c
 
   /* Reset USARTSW[1:0], I2CSW and TIMs bits */
   RCC->CFGR3 &= (uint32_t)0xFF00FCCC;
- 8000f28:	6b19      	ldr	r1, [r3, #48]	@ 0x30
- 8000f2a:	4a2a      	ldr	r2, [pc, #168]	@ (8000fd4 <SystemInit+0xf0>)
+ 8000f74:	6b19      	ldr	r1, [r3, #48]	@ 0x30
+ 8000f76:	4a2a      	ldr	r2, [pc, #168]	@ (8001020 <SystemInit+0xf0>)
 {
- 8000f2c:	b082      	sub	sp, #8
+ 8000f78:	b082      	sub	sp, #8
   RCC->CFGR3 &= (uint32_t)0xFF00FCCC;
- 8000f2e:	400a      	ands	r2, r1
- 8000f30:	631a      	str	r2, [r3, #48]	@ 0x30
+ 8000f7a:	400a      	ands	r2, r1
+ 8000f7c:	631a      	str	r2, [r3, #48]	@ 0x30
   
   /* Disable all interrupts */
   RCC->CIR = 0x00000000;
- 8000f32:	2200      	movs	r2, #0
- 8000f34:	609a      	str	r2, [r3, #8]
+ 8000f7e:	2200      	movs	r2, #0
+ 8000f80:	609a      	str	r2, [r3, #8]
   * @param  None
   * @retval None
   */
 static void SetSysClock(void)
 {
   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
- 8000f36:	9200      	str	r2, [sp, #0]
- 8000f38:	9201      	str	r2, [sp, #4]
+ 8000f82:	9200      	str	r2, [sp, #0]
+ 8000f84:	9201      	str	r2, [sp, #4]
  #if defined (PLL_SOURCE_HSE)
   /* Enable HSE */    
   RCC->CR |= ((uint32_t)RCC_CR_HSEON);
  #elif defined (PLL_SOURCE_HSE_BYPASS)
   /* HSE oscillator bypassed with external clock */    
   RCC->CR |= (uint32_t)(RCC_CR_HSEON | RCC_CR_HSEBYP);
- 8000f3a:	681a      	ldr	r2, [r3, #0]
- 8000f3c:	f442 22a0 	orr.w	r2, r2, #327680	@ 0x50000
- 8000f40:	601a      	str	r2, [r3, #0]
+ 8000f86:	681a      	ldr	r2, [r3, #0]
+ 8000f88:	f442 22a0 	orr.w	r2, r2, #327680	@ 0x50000
+ 8000f8c:	601a      	str	r2, [r3, #0]
  #endif /* PLL_SOURCE_HSE */
    
   /* Wait till HSE is ready and if Time out is reached exit */
   do
   {
     HSEStatus = RCC->CR & RCC_CR_HSERDY;
- 8000f42:	681a      	ldr	r2, [r3, #0]
- 8000f44:	f402 3200 	and.w	r2, r2, #131072	@ 0x20000
- 8000f48:	9201      	str	r2, [sp, #4]
+ 8000f8e:	681a      	ldr	r2, [r3, #0]
+ 8000f90:	f402 3200 	and.w	r2, r2, #131072	@ 0x20000
+ 8000f94:	9201      	str	r2, [sp, #4]
     StartUpCounter++;  
- 8000f4a:	9a00      	ldr	r2, [sp, #0]
- 8000f4c:	3201      	adds	r2, #1
- 8000f4e:	9200      	str	r2, [sp, #0]
+ 8000f96:	9a00      	ldr	r2, [sp, #0]
+ 8000f98:	3201      	adds	r2, #1
+ 8000f9a:	9200      	str	r2, [sp, #0]
   } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
- 8000f50:	9a01      	ldr	r2, [sp, #4]
- 8000f52:	b91a      	cbnz	r2, 8000f5c <SystemInit+0x78>
- 8000f54:	9a00      	ldr	r2, [sp, #0]
- 8000f56:	f5b2 6fa0 	cmp.w	r2, #1280	@ 0x500
- 8000f5a:	d1f2      	bne.n	8000f42 <SystemInit+0x5e>
+ 8000f9c:	9a01      	ldr	r2, [sp, #4]
+ 8000f9e:	b91a      	cbnz	r2, 8000fa8 <SystemInit+0x78>
+ 8000fa0:	9a00      	ldr	r2, [sp, #0]
+ 8000fa2:	f5b2 6fa0 	cmp.w	r2, #1280	@ 0x500
+ 8000fa6:	d1f2      	bne.n	8000f8e <SystemInit+0x5e>
 
   if ((RCC->CR & RCC_CR_HSERDY) != RESET)
- 8000f5c:	681a      	ldr	r2, [r3, #0]
- 8000f5e:	f412 3200 	ands.w	r2, r2, #131072	@ 0x20000
+ 8000fa8:	681a      	ldr	r2, [r3, #0]
+ 8000faa:	f412 3200 	ands.w	r2, r2, #131072	@ 0x20000
   {
     HSEStatus = (uint32_t)0x01;
- 8000f62:	bf18      	it	ne
- 8000f64:	2201      	movne	r2, #1
+ 8000fae:	bf18      	it	ne
+ 8000fb0:	2201      	movne	r2, #1
   }
   else
   {
     HSEStatus = (uint32_t)0x00;
- 8000f66:	9201      	str	r2, [sp, #4]
+ 8000fb2:	9201      	str	r2, [sp, #4]
   }  
 
   if (HSEStatus == (uint32_t)0x01)
- 8000f68:	9a01      	ldr	r2, [sp, #4]
- 8000f6a:	2a01      	cmp	r2, #1
- 8000f6c:	d126      	bne.n	8000fbc <SystemInit+0xd8>
+ 8000fb4:	9a01      	ldr	r2, [sp, #4]
+ 8000fb6:	2a01      	cmp	r2, #1
+ 8000fb8:	d126      	bne.n	8001008 <SystemInit+0xd8>
   {
     /* Enable Prefetch Buffer and set Flash Latency */
     FLASH->ACR = FLASH_ACR_PRFTBE | FLASH_ACR_LATENCY_1;
- 8000f6e:	4a1a      	ldr	r2, [pc, #104]	@ (8000fd8 <SystemInit+0xf4>)
- 8000f70:	2112      	movs	r1, #18
- 8000f72:	6011      	str	r1, [r2, #0]
+ 8000fba:	4a1a      	ldr	r2, [pc, #104]	@ (8001024 <SystemInit+0xf4>)
+ 8000fbc:	2112      	movs	r1, #18
+ 8000fbe:	6011      	str	r1, [r2, #0]
  
     /* HCLK = SYSCLK */
     RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
- 8000f74:	685a      	ldr	r2, [r3, #4]
- 8000f76:	605a      	str	r2, [r3, #4]
+ 8000fc0:	685a      	ldr	r2, [r3, #4]
+ 8000fc2:	605a      	str	r2, [r3, #4]
       
     /* PCLK2 = HCLK */
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;
- 8000f78:	685a      	ldr	r2, [r3, #4]
- 8000f7a:	605a      	str	r2, [r3, #4]
+ 8000fc4:	685a      	ldr	r2, [r3, #4]
+ 8000fc6:	605a      	str	r2, [r3, #4]
     
     /* PCLK1 = HCLK */
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;
- 8000f7c:	685a      	ldr	r2, [r3, #4]
- 8000f7e:	f442 6280 	orr.w	r2, r2, #1024	@ 0x400
- 8000f82:	605a      	str	r2, [r3, #4]
+ 8000fc8:	685a      	ldr	r2, [r3, #4]
+ 8000fca:	f442 6280 	orr.w	r2, r2, #1024	@ 0x400
+ 8000fce:	605a      	str	r2, [r3, #4]
     
    
     /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
- 8000f84:	685a      	ldr	r2, [r3, #4]
- 8000f86:	f422 127c 	bic.w	r2, r2, #4128768	@ 0x3f0000
- 8000f8a:	605a      	str	r2, [r3, #4]
+ 8000fd0:	685a      	ldr	r2, [r3, #4]
+ 8000fd2:	f422 127c 	bic.w	r2, r2, #4128768	@ 0x3f0000
+ 8000fd6:	605a      	str	r2, [r3, #4]
                                         RCC_CFGR_PLLMULL));
     RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_PREDIV1 | RCC_CFGR_PLLMULL9);
- 8000f8c:	685a      	ldr	r2, [r3, #4]
- 8000f8e:	f442 12e8 	orr.w	r2, r2, #1900544	@ 0x1d0000
- 8000f92:	605a      	str	r2, [r3, #4]
+ 8000fd8:	685a      	ldr	r2, [r3, #4]
+ 8000fda:	f442 12e8 	orr.w	r2, r2, #1900544	@ 0x1d0000
+ 8000fde:	605a      	str	r2, [r3, #4]
     /* Enable PLL */
     RCC->CR |= RCC_CR_PLLON;
- 8000f94:	681a      	ldr	r2, [r3, #0]
- 8000f96:	f042 7280 	orr.w	r2, r2, #16777216	@ 0x1000000
- 8000f9a:	601a      	str	r2, [r3, #0]
+ 8000fe0:	681a      	ldr	r2, [r3, #0]
+ 8000fe2:	f042 7280 	orr.w	r2, r2, #16777216	@ 0x1000000
+ 8000fe6:	601a      	str	r2, [r3, #0]
 
     /* Wait till PLL is ready */
     while((RCC->CR & RCC_CR_PLLRDY) == 0)
- 8000f9c:	681a      	ldr	r2, [r3, #0]
- 8000f9e:	0192      	lsls	r2, r2, #6
- 8000fa0:	d5fc      	bpl.n	8000f9c <SystemInit+0xb8>
+ 8000fe8:	681a      	ldr	r2, [r3, #0]
+ 8000fea:	0192      	lsls	r2, r2, #6
+ 8000fec:	d5fc      	bpl.n	8000fe8 <SystemInit+0xb8>
     {
     }
 
     /* Select PLL as system clock source */
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
- 8000fa2:	685a      	ldr	r2, [r3, #4]
- 8000fa4:	f022 0203 	bic.w	r2, r2, #3
- 8000fa8:	605a      	str	r2, [r3, #4]
+ 8000fee:	685a      	ldr	r2, [r3, #4]
+ 8000ff0:	f022 0203 	bic.w	r2, r2, #3
+ 8000ff4:	605a      	str	r2, [r3, #4]
     RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;    
- 8000faa:	685a      	ldr	r2, [r3, #4]
- 8000fac:	f042 0202 	orr.w	r2, r2, #2
- 8000fb0:	605a      	str	r2, [r3, #4]
+ 8000ff6:	685a      	ldr	r2, [r3, #4]
+ 8000ff8:	f042 0202 	orr.w	r2, r2, #2
+ 8000ffc:	605a      	str	r2, [r3, #4]
 
     /* Wait till PLL is used as system clock source */
     while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)RCC_CFGR_SWS_PLL)
- 8000fb2:	685a      	ldr	r2, [r3, #4]
- 8000fb4:	f002 020c 	and.w	r2, r2, #12
- 8000fb8:	2a08      	cmp	r2, #8
- 8000fba:	d1fa      	bne.n	8000fb2 <SystemInit+0xce>
+ 8000ffe:	685a      	ldr	r2, [r3, #4]
+ 8001000:	f002 020c 	and.w	r2, r2, #12
+ 8001004:	2a08      	cmp	r2, #8
+ 8001006:	d1fa      	bne.n	8000ffe <SystemInit+0xce>
   SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH. */
- 8000fbc:	4b02      	ldr	r3, [pc, #8]	@ (8000fc8 <SystemInit+0xe4>)
- 8000fbe:	f04f 6200 	mov.w	r2, #134217728	@ 0x8000000
- 8000fc2:	609a      	str	r2, [r3, #8]
+ 8001008:	4b02      	ldr	r3, [pc, #8]	@ (8001014 <SystemInit+0xe4>)
+ 800100a:	f04f 6200 	mov.w	r2, #134217728	@ 0x8000000
+ 800100e:	609a      	str	r2, [r3, #8]
 }
- 8000fc4:	b002      	add	sp, #8
- 8000fc6:	4770      	bx	lr
- 8000fc8:	e000ed00 	.word	0xe000ed00
- 8000fcc:	40021000 	.word	0x40021000
- 8000fd0:	f87fc00c 	.word	0xf87fc00c
- 8000fd4:	ff00fccc 	.word	0xff00fccc
- 8000fd8:	40022000 	.word	0x40022000
+ 8001010:	b002      	add	sp, #8
+ 8001012:	4770      	bx	lr
+ 8001014:	e000ed00 	.word	0xe000ed00
+ 8001018:	40021000 	.word	0x40021000
+ 800101c:	f87fc00c 	.word	0xf87fc00c
+ 8001020:	ff00fccc 	.word	0xff00fccc
+ 8001024:	40022000 	.word	0x40022000
 
-08000fdc <NMI_Handler>:
+08001028 <NMI_Handler>:
   * @param  None
   * @retval None
   */
 void NMI_Handler(void)
 {
 }
- 8000fdc:	4770      	bx	lr
+ 8001028:	4770      	bx	lr
 
-08000fde <HardFault_Handler>:
+0800102a <HardFault_Handler>:
   * @retval None
   */
 void HardFault_Handler(void)
 {
   /* Go to infinite loop when Hard Fault exception occurs */
   while (1)
- 8000fde:	e7fe      	b.n	8000fde <HardFault_Handler>
+ 800102a:	e7fe      	b.n	800102a <HardFault_Handler>
 
-08000fe0 <MemManage_Handler>:
+0800102c <MemManage_Handler>:
   * @retval None
   */
 void MemManage_Handler(void)
 {
   /* Go to infinite loop when Memory Manage exception occurs */
   while (1)
- 8000fe0:	e7fe      	b.n	8000fe0 <MemManage_Handler>
+ 800102c:	e7fe      	b.n	800102c <MemManage_Handler>
 
-08000fe2 <BusFault_Handler>:
+0800102e <BusFault_Handler>:
   * @retval None
   */
 void BusFault_Handler(void)
 {
   /* Go to infinite loop when Bus Fault exception occurs */
   while (1)
- 8000fe2:	e7fe      	b.n	8000fe2 <BusFault_Handler>
+ 800102e:	e7fe      	b.n	800102e <BusFault_Handler>
 
-08000fe4 <UsageFault_Handler>:
+08001030 <UsageFault_Handler>:
   * @retval None
   */
 void UsageFault_Handler(void)
 {
   /* Go to infinite loop when Usage Fault exception occurs */
   while (1)
- 8000fe4:	e7fe      	b.n	8000fe4 <UsageFault_Handler>
+ 8001030:	e7fe      	b.n	8001030 <UsageFault_Handler>
 
-08000fe6 <SVC_Handler>:
+08001032 <SVC_Handler>:
 /**
   * @brief  This function handles SVCall exception.
   * @param  None
   * @retval None
   */
 void SVC_Handler(void)
- 8000fe6:	4770      	bx	lr
+ 8001032:	4770      	bx	lr
 
-08000fe8 <DebugMon_Handler>:
+08001034 <DebugMon_Handler>:
 /**
   * @brief  This function handles Debug Monitor exception.
   * @param  None
   * @retval None
   */
 void DebugMon_Handler(void)
- 8000fe8:	4770      	bx	lr
+ 8001034:	4770      	bx	lr
 
-08000fea <PendSV_Handler>:
+08001036 <PendSV_Handler>:
 /**
   * @brief  This function handles PendSVC exception.
   * @param  None
   * @retval None
   */
 void PendSV_Handler(void)
- 8000fea:	4770      	bx	lr
+ 8001036:	4770      	bx	lr
 
-08000fec <SysTick_Handler>:
+08001038 <SysTick_Handler>:
   * @param  None
   * @retval None
   */
 void SysTick_Handler(void)
 {
   TimingDelay_Decrement();
- 8000fec:	f000 b866 	b.w	80010bc <TimingDelay_Decrement>
+ 8001038:	f000 b94e 	b.w	80012d8 <TimingDelay_Decrement>
 
-08000ff0 <Delay>:
-  * @brief  Inserts a delay time.
-  * @param  nTime: specifies the delay time length, in milliseconds.
-  * @retval None
-  */
+0800103c <AllLEDsOff>:
+    }
+  }
+}
+
+void AllLEDsOff(void)
+{
+ 800103c:	b508      	push	{r3, lr}
+  STM_EVAL_LEDOff(LED3);
+ 800103e:	2000      	movs	r0, #0
+ 8001040:	f7ff f8ce 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED4);
+ 8001044:	2001      	movs	r0, #1
+ 8001046:	f7ff f8cb 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED5);
+ 800104a:	2002      	movs	r0, #2
+ 800104c:	f7ff f8c8 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED6);
+ 8001050:	2003      	movs	r0, #3
+ 8001052:	f7ff f8c5 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED7);
+ 8001056:	2004      	movs	r0, #4
+ 8001058:	f7ff f8c2 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED8);
+ 800105c:	2005      	movs	r0, #5
+ 800105e:	f7ff f8bf 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED9);
+ 8001062:	2006      	movs	r0, #6
+ 8001064:	f7ff f8bc 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED10);
+}
+ 8001068:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+  STM_EVAL_LEDOff(LED10);
+ 800106c:	2007      	movs	r0, #7
+ 800106e:	f7ff b8b7 	b.w	80001e0 <STM_EVAL_LEDOff>
+	...
+
+08001074 <Delay>:
+    Delay(10); 
+  }
+}
+
 void Delay(__IO uint32_t nTime)
 { 
- 8000ff0:	b082      	sub	sp, #8
+ 8001074:	b082      	sub	sp, #8
   TimingDelay = nTime;
- 8000ff2:	4b04      	ldr	r3, [pc, #16]	@ (8001004 <Delay+0x14>)
+ 8001076:	4b04      	ldr	r3, [pc, #16]	@ (8001088 <Delay+0x14>)
 { 
- 8000ff4:	9001      	str	r0, [sp, #4]
+ 8001078:	9001      	str	r0, [sp, #4]
   TimingDelay = nTime;
- 8000ff6:	9a01      	ldr	r2, [sp, #4]
- 8000ff8:	601a      	str	r2, [r3, #0]
+ 800107a:	9a01      	ldr	r2, [sp, #4]
+ 800107c:	601a      	str	r2, [r3, #0]
 
   while(TimingDelay != 0);
- 8000ffa:	681a      	ldr	r2, [r3, #0]
- 8000ffc:	2a00      	cmp	r2, #0
- 8000ffe:	d1fc      	bne.n	8000ffa <Delay+0xa>
+ 800107e:	681a      	ldr	r2, [r3, #0]
+ 8001080:	2a00      	cmp	r2, #0
+ 8001082:	d1fc      	bne.n	800107e <Delay+0xa>
 }
- 8001000:	b002      	add	sp, #8
- 8001002:	4770      	bx	lr
- 8001004:	20000028 	.word	0x20000028
+ 8001084:	b002      	add	sp, #8
+ 8001086:	4770      	bx	lr
+ 8001088:	20000294 	.word	0x20000294
 
-08001008 <main>:
+0800108c <ToggleLEDsInCircle>:
 {
- 8001008:	b508      	push	{r3, lr}
-  STM_EVAL_LEDInit(LED3);
- 800100a:	2000      	movs	r0, #0
- 800100c:	f7ff f8bc 	bl	8000188 <STM_EVAL_LEDInit>
-  STM_EVAL_LEDInit(LED4);
- 8001010:	2001      	movs	r0, #1
- 8001012:	f7ff f8b9 	bl	8000188 <STM_EVAL_LEDInit>
-  STM_EVAL_LEDInit(LED5);
- 8001016:	2002      	movs	r0, #2
- 8001018:	f7ff f8b6 	bl	8000188 <STM_EVAL_LEDInit>
-  STM_EVAL_LEDInit(LED6);
- 800101c:	2003      	movs	r0, #3
- 800101e:	f7ff f8b3 	bl	8000188 <STM_EVAL_LEDInit>
-  STM_EVAL_LEDInit(LED7);
- 8001022:	2004      	movs	r0, #4
- 8001024:	f7ff f8b0 	bl	8000188 <STM_EVAL_LEDInit>
-  STM_EVAL_LEDInit(LED8);
- 8001028:	2005      	movs	r0, #5
- 800102a:	f7ff f8ad 	bl	8000188 <STM_EVAL_LEDInit>
-  STM_EVAL_LEDInit(LED9);
- 800102e:	2006      	movs	r0, #6
- 8001030:	f7ff f8aa 	bl	8000188 <STM_EVAL_LEDInit>
-  STM_EVAL_LEDInit(LED10);
- 8001034:	2007      	movs	r0, #7
- 8001036:	f7ff f8a7 	bl	8000188 <STM_EVAL_LEDInit>
+ 800108c:	b508      	push	{r3, lr}
+  AllLEDsOff();
+ 800108e:	f7ff ffd5 	bl	800103c <AllLEDsOff>
+  STM_EVAL_LEDToggle(LED3);
+ 8001092:	2000      	movs	r0, #0
+ 8001094:	f7ff f8b2 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 8001098:	2019      	movs	r0, #25
+ 800109a:	f7ff ffeb 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED5);
+ 800109e:	2002      	movs	r0, #2
+ 80010a0:	f7ff f8ac 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80010a4:	2019      	movs	r0, #25
+ 80010a6:	f7ff ffe5 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED7);
+ 80010aa:	2004      	movs	r0, #4
+ 80010ac:	f7ff f8a6 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80010b0:	2019      	movs	r0, #25
+ 80010b2:	f7ff ffdf 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED9);
+ 80010b6:	2006      	movs	r0, #6
+ 80010b8:	f7ff f8a0 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80010bc:	2019      	movs	r0, #25
+ 80010be:	f7ff ffd9 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED10);
+ 80010c2:	2007      	movs	r0, #7
+ 80010c4:	f7ff f89a 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80010c8:	2019      	movs	r0, #25
+ 80010ca:	f7ff ffd3 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED8);
+ 80010ce:	2005      	movs	r0, #5
+ 80010d0:	f7ff f894 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80010d4:	2019      	movs	r0, #25
+ 80010d6:	f7ff ffcd 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED6);
+ 80010da:	2003      	movs	r0, #3
+ 80010dc:	f7ff f88e 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80010e0:	2019      	movs	r0, #25
+ 80010e2:	f7ff ffc7 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED4);
+ 80010e6:	2001      	movs	r0, #1
+ 80010e8:	f7ff f888 	bl	80001fc <STM_EVAL_LEDToggle>
+}
+ 80010ec:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+  Delay(25);
+ 80010f0:	2019      	movs	r0, #25
+ 80010f2:	f7ff bfbf 	b.w	8001074 <Delay>
+
+080010f6 <ToggleLEDsHalfPattern>:
+{
+ 80010f6:	b508      	push	{r3, lr}
+  AllLEDsOff();
+ 80010f8:	f7ff ffa0 	bl	800103c <AllLEDsOff>
   STM_EVAL_LEDOn(LED3);
- 800103a:	2000      	movs	r0, #0
- 800103c:	f7ff f8c2 	bl	80001c4 <STM_EVAL_LEDOn>
+ 80010fc:	2000      	movs	r0, #0
+ 80010fe:	f7ff f861 	bl	80001c4 <STM_EVAL_LEDOn>
+  STM_EVAL_LEDOn(LED5);
+ 8001102:	2002      	movs	r0, #2
+ 8001104:	f7ff f85e 	bl	80001c4 <STM_EVAL_LEDOn>
   STM_EVAL_LEDOn(LED7);
- 8001040:	2004      	movs	r0, #4
- 8001042:	f7ff f8bf 	bl	80001c4 <STM_EVAL_LEDOn>
+ 8001108:	2004      	movs	r0, #4
+ 800110a:	f7ff f85b 	bl	80001c4 <STM_EVAL_LEDOn>
+  STM_EVAL_LEDOn(LED9);
+ 800110e:	2006      	movs	r0, #6
+ 8001110:	f7ff f858 	bl	80001c4 <STM_EVAL_LEDOn>
+  Delay(100);
+ 8001114:	2064      	movs	r0, #100	@ 0x64
+ 8001116:	f7ff ffad 	bl	8001074 <Delay>
+  STM_EVAL_LEDOff(LED3);
+ 800111a:	2000      	movs	r0, #0
+ 800111c:	f7ff f860 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED5);
+ 8001120:	2002      	movs	r0, #2
+ 8001122:	f7ff f85d 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED7);
+ 8001126:	2004      	movs	r0, #4
+ 8001128:	f7ff f85a 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED9);
+ 800112c:	2006      	movs	r0, #6
+ 800112e:	f7ff f857 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOn(LED4);
+ 8001132:	2001      	movs	r0, #1
+ 8001134:	f7ff f846 	bl	80001c4 <STM_EVAL_LEDOn>
   STM_EVAL_LEDOn(LED6);
- 8001046:	2003      	movs	r0, #3
- 8001048:	f7ff f8bc 	bl	80001c4 <STM_EVAL_LEDOn>
+ 8001138:	2003      	movs	r0, #3
+ 800113a:	f7ff f843 	bl	80001c4 <STM_EVAL_LEDOn>
+  STM_EVAL_LEDOn(LED8);
+ 800113e:	2005      	movs	r0, #5
+ 8001140:	f7ff f840 	bl	80001c4 <STM_EVAL_LEDOn>
   STM_EVAL_LEDOn(LED10);
- 800104c:	2007      	movs	r0, #7
- 800104e:	f7ff f8b9 	bl	80001c4 <STM_EVAL_LEDOn>
-  if (SysTick_Config(SystemCoreClock / 1000))
- 8001052:	4b18      	ldr	r3, [pc, #96]	@ (80010b4 <main+0xac>)
- 8001054:	f44f 727a 	mov.w	r2, #1000	@ 0x3e8
- 8001058:	681b      	ldr	r3, [r3, #0]
- 800105a:	fbb3 f3f2 	udiv	r3, r3, r2
+ 8001144:	2007      	movs	r0, #7
+ 8001146:	f7ff f83d 	bl	80001c4 <STM_EVAL_LEDOn>
+  Delay(100);
+ 800114a:	2064      	movs	r0, #100	@ 0x64
+ 800114c:	f7ff ff92 	bl	8001074 <Delay>
+  STM_EVAL_LEDOff(LED4);
+ 8001150:	2001      	movs	r0, #1
+ 8001152:	f7ff f845 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED6);
+ 8001156:	2003      	movs	r0, #3
+ 8001158:	f7ff f842 	bl	80001e0 <STM_EVAL_LEDOff>
+  STM_EVAL_LEDOff(LED8);
+ 800115c:	2005      	movs	r0, #5
+ 800115e:	f7ff f83f 	bl	80001e0 <STM_EVAL_LEDOff>
+}
+ 8001162:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+  STM_EVAL_LEDOff(LED10);
+ 8001166:	2007      	movs	r0, #7
+ 8001168:	f7ff b83a 	b.w	80001e0 <STM_EVAL_LEDOff>
+
+0800116c <ToggleLEDsInCirclePattern>:
+{
+ 800116c:	b508      	push	{r3, lr}
+  AllLEDsOff();
+ 800116e:	f7ff ff65 	bl	800103c <AllLEDsOff>
+  STM_EVAL_LEDToggle(LED3);
+ 8001172:	2000      	movs	r0, #0
+ 8001174:	f7ff f842 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 8001178:	2019      	movs	r0, #25
+ 800117a:	f7ff ff7b 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED7);
+ 800117e:	2004      	movs	r0, #4
+ 8001180:	f7ff f83c 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 8001184:	2019      	movs	r0, #25
+ 8001186:	f7ff ff75 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED10);
+ 800118a:	2007      	movs	r0, #7
+ 800118c:	f7ff f836 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 8001190:	2019      	movs	r0, #25
+ 8001192:	f7ff ff6f 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED6);
+ 8001196:	2003      	movs	r0, #3
+ 8001198:	f7ff f830 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 800119c:	2019      	movs	r0, #25
+ 800119e:	f7ff ff69 	bl	8001074 <Delay>
+  AllLEDsOff();
+ 80011a2:	f7ff ff4b 	bl	800103c <AllLEDsOff>
+  Delay(25);
+ 80011a6:	2019      	movs	r0, #25
+ 80011a8:	f7ff ff64 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED5);
+ 80011ac:	2002      	movs	r0, #2
+ 80011ae:	f7ff f825 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80011b2:	2019      	movs	r0, #25
+ 80011b4:	f7ff ff5e 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED9);
+ 80011b8:	2006      	movs	r0, #6
+ 80011ba:	f7ff f81f 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80011be:	2019      	movs	r0, #25
+ 80011c0:	f7ff ff58 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED8);
+ 80011c4:	2005      	movs	r0, #5
+ 80011c6:	f7ff f819 	bl	80001fc <STM_EVAL_LEDToggle>
+  Delay(25);
+ 80011ca:	2019      	movs	r0, #25
+ 80011cc:	f7ff ff52 	bl	8001074 <Delay>
+  STM_EVAL_LEDToggle(LED4);
+ 80011d0:	2001      	movs	r0, #1
+ 80011d2:	f7ff f813 	bl	80001fc <STM_EVAL_LEDToggle>
+}
+ 80011d6:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+  Delay(25);
+ 80011da:	2019      	movs	r0, #25
+ 80011dc:	f7ff bf4a 	b.w	8001074 <Delay>
+
+080011e0 <ToggleRandomLEDs>:
+{
+ 80011e0:	b510      	push	{r4, lr}
+  AllLEDsOff();
+ 80011e2:	f7ff ff2b 	bl	800103c <AllLEDsOff>
+ 80011e6:	2408      	movs	r4, #8
+    int randomIndex = rand() % 8 + 3; // from 3 to 10 (LED3 to LED10)
+ 80011e8:	f7ff fe62 	bl	8000eb0 <rand>
+ 80011ec:	4243      	negs	r3, r0
+ 80011ee:	f003 0307 	and.w	r3, r3, #7
+ 80011f2:	f000 0007 	and.w	r0, r0, #7
+ 80011f6:	bf58      	it	pl
+ 80011f8:	4258      	negpl	r0, r3
+ 80011fa:	3003      	adds	r0, #3
+    STM_EVAL_LEDToggle(randomIndex);
+ 80011fc:	b2c0      	uxtb	r0, r0
+ 80011fe:	f7fe fffd 	bl	80001fc <STM_EVAL_LEDToggle>
+    Delay(10); 
+ 8001202:	200a      	movs	r0, #10
+ 8001204:	f7ff ff36 	bl	8001074 <Delay>
+  for (int i = 0; i < 8; ++i) // Toggle 4 random LEDs
+ 8001208:	3c01      	subs	r4, #1
+ 800120a:	d1ed      	bne.n	80011e8 <ToggleRandomLEDs+0x8>
+}
+ 800120c:	bd10      	pop	{r4, pc}
+	...
+
+08001210 <main>:
+  RCC_GetClocksFreq(&RCC_Clocks);
+ 8001210:	4c2d      	ldr	r4, [pc, #180]	@ (80012c8 <main+0xb8>)
+{
+ 8001212:	b508      	push	{r3, lr}
+  RCC_GetClocksFreq(&RCC_Clocks);
+ 8001214:	4620      	mov	r0, r4
+ 8001216:	f7ff fb5d 	bl	80008d4 <RCC_GetClocksFreq>
+  SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
+ 800121a:	6863      	ldr	r3, [r4, #4]
+    must contain a vendor-specific implementation of this function.
+
  */
 __STATIC_INLINE uint32_t SysTick_Config(uint32_t ticks)
 {
   if (ticks > SysTick_LOAD_RELOAD_Msk)  return (1);            /* Reload value impossible */
+ 800121c:	f1b3 4fc8 	cmp.w	r3, #1677721600	@ 0x64000000
+ 8001220:	d20e      	bcs.n	8001240 <main+0x30>
+ 8001222:	2264      	movs	r2, #100	@ 0x64
+ 8001224:	fbb3 f3f2 	udiv	r3, r3, r2
 
   SysTick->LOAD  = (ticks & SysTick_LOAD_RELOAD_Msk) - 1;      /* set reload register */
- 800105e:	f04f 22e0 	mov.w	r2, #3758153728	@ 0xe000e000
- 8001062:	3b01      	subs	r3, #1
- 8001064:	6153      	str	r3, [r2, #20]
+ 8001228:	f04f 22e0 	mov.w	r2, #3758153728	@ 0xe000e000
+ 800122c:	3b01      	subs	r3, #1
+ 800122e:	6153      	str	r3, [r2, #20]
     SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff); } /* set Priority for Cortex-M  System Interrupts */
- 8001066:	4b14      	ldr	r3, [pc, #80]	@ (80010b8 <main+0xb0>)
- 8001068:	21f0      	movs	r1, #240	@ 0xf0
- 800106a:	f883 1023 	strb.w	r1, [r3, #35]	@ 0x23
+ 8001230:	4b26      	ldr	r3, [pc, #152]	@ (80012cc <main+0xbc>)
+ 8001232:	21f0      	movs	r1, #240	@ 0xf0
+ 8001234:	f883 1023 	strb.w	r1, [r3, #35]	@ 0x23
   NVIC_SetPriority (SysTick_IRQn, (1<<__NVIC_PRIO_BITS) - 1);  /* set Priority for Systick Interrupt */
   SysTick->VAL   = 0;                                          /* Load the SysTick Counter Value */
- 800106e:	2300      	movs	r3, #0
- 8001070:	6193      	str	r3, [r2, #24]
+ 8001238:	2300      	movs	r3, #0
+ 800123a:	6193      	str	r3, [r2, #24]
   SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk |
- 8001072:	2307      	movs	r3, #7
- 8001074:	6113      	str	r3, [r2, #16]
-    STM_EVAL_LEDToggle(LED3);
- 8001076:	2000      	movs	r0, #0
- 8001078:	f7ff f8c0 	bl	80001fc <STM_EVAL_LEDToggle>
-    STM_EVAL_LEDToggle(LED7);
- 800107c:	2004      	movs	r0, #4
- 800107e:	f7ff f8bd 	bl	80001fc <STM_EVAL_LEDToggle>
-    STM_EVAL_LEDToggle(LED6);
- 8001082:	2003      	movs	r0, #3
- 8001084:	f7ff f8ba 	bl	80001fc <STM_EVAL_LEDToggle>
-    STM_EVAL_LEDToggle(LED10);
- 8001088:	2007      	movs	r0, #7
- 800108a:	f7ff f8b7 	bl	80001fc <STM_EVAL_LEDToggle>
-    Delay(100);
- 800108e:	2064      	movs	r0, #100	@ 0x64
- 8001090:	f7ff ffae 	bl	8000ff0 <Delay>
-    STM_EVAL_LEDToggle(LED4);
- 8001094:	2001      	movs	r0, #1
- 8001096:	f7ff f8b1 	bl	80001fc <STM_EVAL_LEDToggle>
-    STM_EVAL_LEDToggle(LED5);
- 800109a:	2002      	movs	r0, #2
- 800109c:	f7ff f8ae 	bl	80001fc <STM_EVAL_LEDToggle>
-    STM_EVAL_LEDToggle(LED9);
- 80010a0:	2006      	movs	r0, #6
- 80010a2:	f7ff f8ab 	bl	80001fc <STM_EVAL_LEDToggle>
-    STM_EVAL_LEDToggle(LED8);
- 80010a6:	2005      	movs	r0, #5
- 80010a8:	f7ff f8a8 	bl	80001fc <STM_EVAL_LEDToggle>
-    Delay(150);
- 80010ac:	2096      	movs	r0, #150	@ 0x96
- 80010ae:	f7ff ff9f 	bl	8000ff0 <Delay>
-  while (1)
- 80010b2:	e7e0      	b.n	8001076 <main+0x6e>
- 80010b4:	20000024 	.word	0x20000024
- 80010b8:	e000ed00 	.word	0xe000ed00
+ 800123c:	2307      	movs	r3, #7
+ 800123e:	6113      	str	r3, [r2, #16]
+  STM_EVAL_LEDInit(LED3);
+ 8001240:	2000      	movs	r0, #0
+ 8001242:	f7fe ffa1 	bl	8000188 <STM_EVAL_LEDInit>
+  STM_EVAL_LEDInit(LED4);
+ 8001246:	2001      	movs	r0, #1
+ 8001248:	f7fe ff9e 	bl	8000188 <STM_EVAL_LEDInit>
+  STM_EVAL_LEDInit(LED5);
+ 800124c:	2002      	movs	r0, #2
+ 800124e:	f7fe ff9b 	bl	8000188 <STM_EVAL_LEDInit>
+  STM_EVAL_LEDInit(LED6);
+ 8001252:	2003      	movs	r0, #3
+ 8001254:	f7fe ff98 	bl	8000188 <STM_EVAL_LEDInit>
+  STM_EVAL_LEDInit(LED7);
+ 8001258:	2004      	movs	r0, #4
+ 800125a:	f7fe ff95 	bl	8000188 <STM_EVAL_LEDInit>
+  STM_EVAL_LEDInit(LED8);
+ 800125e:	2005      	movs	r0, #5
+ 8001260:	f7fe ff92 	bl	8000188 <STM_EVAL_LEDInit>
+  STM_EVAL_LEDInit(LED9);
+ 8001264:	2006      	movs	r0, #6
+ 8001266:	f7fe ff8f 	bl	8000188 <STM_EVAL_LEDInit>
+  UserButtonPressed = 0x00; 
+ 800126a:	4d19      	ldr	r5, [pc, #100]	@ (80012d0 <main+0xc0>)
+    switch (currentState)
+ 800126c:	4c19      	ldr	r4, [pc, #100]	@ (80012d4 <main+0xc4>)
+  STM_EVAL_LEDInit(LED10);
+ 800126e:	2007      	movs	r0, #7
+ 8001270:	f7fe ff8a 	bl	8000188 <STM_EVAL_LEDInit>
+  UserButtonPressed = 0x00; 
+ 8001274:	2600      	movs	r6, #0
+  STM_EVAL_PBInit(BUTTON_USER, BUTTON_MODE_EXTI);
+ 8001276:	2101      	movs	r1, #1
+ 8001278:	2000      	movs	r0, #0
+ 800127a:	f7fe ffcf 	bl	800021c <STM_EVAL_PBInit>
+  UserButtonPressed = 0x00; 
+ 800127e:	602e      	str	r6, [r5, #0]
+    switch (currentState)
+ 8001280:	7823      	ldrb	r3, [r4, #0]
+ 8001282:	2b04      	cmp	r3, #4
+ 8001284:	d806      	bhi.n	8001294 <main+0x84>
+ 8001286:	e8df f003 	tbb	[pc, r3]
+ 800128a:	1303      	.short	0x1303
+ 800128c:	1916      	.short	0x1916
+ 800128e:	1c          	.byte	0x1c
+ 800128f:	00          	.byte	0x00
+        AllLEDsOff();
+ 8001290:	f7ff fed4 	bl	800103c <AllLEDsOff>
+    if (UserButtonPressed == 0x01)
+ 8001294:	682b      	ldr	r3, [r5, #0]
+ 8001296:	2b01      	cmp	r3, #1
+ 8001298:	d1f2      	bne.n	8001280 <main+0x70>
+      currentState = (currentState + 1) % 5;  // 5 states 
+ 800129a:	7823      	ldrb	r3, [r4, #0]
+      UserButtonPressed = 0x00;
+ 800129c:	602e      	str	r6, [r5, #0]
+      currentState = (currentState + 1) % 5;  // 5 states 
+ 800129e:	3301      	adds	r3, #1
+ 80012a0:	2205      	movs	r2, #5
+ 80012a2:	fbb3 f2f2 	udiv	r2, r3, r2
+ 80012a6:	eb02 0282 	add.w	r2, r2, r2, lsl #2
+ 80012aa:	1a9b      	subs	r3, r3, r2
+ 80012ac:	7023      	strb	r3, [r4, #0]
+ 80012ae:	e7e7      	b.n	8001280 <main+0x70>
+        ToggleLEDsInCircle();
+ 80012b0:	f7ff feec 	bl	800108c <ToggleLEDsInCircle>
+        break;
+ 80012b4:	e7ee      	b.n	8001294 <main+0x84>
+        ToggleLEDsHalfPattern();
+ 80012b6:	f7ff ff1e 	bl	80010f6 <ToggleLEDsHalfPattern>
+        break;
+ 80012ba:	e7eb      	b.n	8001294 <main+0x84>
+        ToggleLEDsInCirclePattern();
+ 80012bc:	f7ff ff56 	bl	800116c <ToggleLEDsInCirclePattern>
+        break;
+ 80012c0:	e7e8      	b.n	8001294 <main+0x84>
+        ToggleRandomLEDs();
+ 80012c2:	f7ff ff8d 	bl	80011e0 <ToggleRandomLEDs>
+        break;
+ 80012c6:	e7e5      	b.n	8001294 <main+0x84>
+ 80012c8:	20000298 	.word	0x20000298
+ 80012cc:	e000ed00 	.word	0xe000ed00
+ 80012d0:	20000290 	.word	0x20000290
+ 80012d4:	2000028c 	.word	0x2000028c
 
-080010bc <TimingDelay_Decrement>:
-  * @param  None
-  * @retval None
-  */
+080012d8 <TimingDelay_Decrement>:
+
 void TimingDelay_Decrement(void)
 {
   if (TimingDelay != 0x00)
- 80010bc:	4b03      	ldr	r3, [pc, #12]	@ (80010cc <TimingDelay_Decrement+0x10>)
- 80010be:	681a      	ldr	r2, [r3, #0]
- 80010c0:	b112      	cbz	r2, 80010c8 <TimingDelay_Decrement+0xc>
+ 80012d8:	4b03      	ldr	r3, [pc, #12]	@ (80012e8 <TimingDelay_Decrement+0x10>)
+ 80012da:	681a      	ldr	r2, [r3, #0]
+ 80012dc:	b112      	cbz	r2, 80012e4 <TimingDelay_Decrement+0xc>
   { 
     TimingDelay--;
- 80010c2:	681a      	ldr	r2, [r3, #0]
- 80010c4:	3a01      	subs	r2, #1
- 80010c6:	601a      	str	r2, [r3, #0]
+ 80012de:	681a      	ldr	r2, [r3, #0]
+ 80012e0:	3a01      	subs	r2, #1
+ 80012e2:	601a      	str	r2, [r3, #0]
   }
 }
- 80010c8:	4770      	bx	lr
- 80010ca:	bf00      	nop
- 80010cc:	20000028 	.word	0x20000028
+ 80012e4:	4770      	bx	lr
+ 80012e6:	bf00      	nop
+ 80012e8:	20000294 	.word	0x20000294
 
-080010d0 <GPIO_CLK>:
- 80010d0:	00200000 00200000 00200000 00200000     .. ... ... ... .
- 80010e0:	00200000 00200000 00200000 00200000     .. ... ... ... .
+080012ec <EXTI0_IRQHandler>:
 
-080010f0 <GPIO_PIN>:
- 80010f0:	01000200 80000400 40000800 20001000     ...........@... 
+void EXTI0_IRQHandler(void)
+{
+ 80012ec:	b508      	push	{r3, lr}
+  if (EXTI_GetITStatus(USER_BUTTON_EXTI_LINE) != RESET)
+ 80012ee:	2000      	movs	r0, #0
+ 80012f0:	f7ff f8a8 	bl	8000444 <EXTI_GetITStatus>
+ 80012f4:	b138      	cbz	r0, 8001306 <EXTI0_IRQHandler+0x1a>
+  {
+    /* Set the UserButtonPressed variable */
+    UserButtonPressed = 0x01;
+ 80012f6:	4b04      	ldr	r3, [pc, #16]	@ (8001308 <EXTI0_IRQHandler+0x1c>)
+ 80012f8:	2201      	movs	r2, #1
+ 80012fa:	601a      	str	r2, [r3, #0]
 
-08001100 <BUTTON_IRQn>:
- 8001100:	00000006                                ....
+    /* Clear the EXTI line pending bit */
+    EXTI_ClearITPendingBit(USER_BUTTON_EXTI_LINE);
+ 80012fc:	2000      	movs	r0, #0
+  }
+}
+ 80012fe:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+    EXTI_ClearITPendingBit(USER_BUTTON_EXTI_LINE);
+ 8001302:	f7ff b8b3 	b.w	800046c <EXTI_ClearITPendingBit>
+}
+ 8001306:	bd08      	pop	{r3, pc}
+ 8001308:	20000290 	.word	0x20000290
 
-08001104 <BUTTON_PIN_SOURCE>:
- 8001104:	00000000                                ....
+0800130c <GPIO_CLK>:
+ 800130c:	00200000 00200000 00200000 00200000     .. ... ... ... .
+ 800131c:	00200000 00200000 00200000 00200000     .. ... ... ... .
 
-08001108 <BUTTON_PORT_SOURCE>:
- 8001108:	00000000                                ....
+0800132c <GPIO_PIN>:
+ 800132c:	01000200 80000400 40000800 20001000     ...........@... 
 
-0800110c <BUTTON_EXTI_LINE>:
- 800110c:	00000000                                ....
+0800133c <BUTTON_IRQn>:
+ 800133c:	00000006                                ....
 
-08001110 <BUTTON_CLK>:
- 8001110:	00020000                                ....
+08001340 <BUTTON_PIN_SOURCE>:
+ 8001340:	00000000                                ....
 
-08001114 <BUTTON_PIN>:
- 8001114:	00000001                                ....
+08001344 <BUTTON_PORT_SOURCE>:
+ 8001344:	00000000                                ....
 
-08001118 <APBAHBPrescTable>:
- 8001118:	00000000 04030201 04030201 09080706     ................
+08001348 <BUTTON_EXTI_LINE>:
+ 8001348:	00000000                                ....
 
-08001128 <ADCPrescTable>:
- 8001128:	00010000 00040002 00080006 000c000a     ................
- 8001138:	00200010 00800040 00000100              .. .@.......
+0800134c <BUTTON_CLK>:
+ 800134c:	00020000                                ....
 
-08001144 <_init>:
- 8001144:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8001146:	bf00      	nop
- 8001148:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800114a:	bc08      	pop	{r3}
- 800114c:	469e      	mov	lr, r3
- 800114e:	4770      	bx	lr
+08001350 <BUTTON_PIN>:
+ 8001350:	00000001                                ....
 
-08001150 <_fini>:
- 8001150:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8001152:	bf00      	nop
- 8001154:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 8001156:	bc08      	pop	{r3}
- 8001158:	469e      	mov	lr, r3
- 800115a:	4770      	bx	lr
+08001354 <APBAHBPrescTable>:
+ 8001354:	00000000 04030201 04030201 09080706     ................
+
+08001364 <ADCPrescTable>:
+ 8001364:	00010000 00040002 00080006 000c000a     ................
+ 8001374:	00200010 00800040 00000100              .. .@.......
+
+08001380 <_init>:
+ 8001380:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8001382:	bf00      	nop
+ 8001384:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8001386:	bc08      	pop	{r3}
+ 8001388:	469e      	mov	lr, r3
+ 800138a:	4770      	bx	lr
+
+0800138c <_fini>:
+ 800138c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800138e:	bf00      	nop
+ 8001390:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8001392:	bc08      	pop	{r3}
+ 8001394:	469e      	mov	lr, r3
+ 8001396:	4770      	bx	lr

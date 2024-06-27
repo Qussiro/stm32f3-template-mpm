@@ -1,50 +1,27 @@
-/**
-  ******************************************************************************
-  * @file    SysTick_Example/main.c 
-  * @author  MCD Application Team
-  * @version V1.1.0
-  * @date    20-September-2012
-  * @brief   Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
-  *
-  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
-  * You may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at:
-  *
-  *        http://www.st.com/software_license_agreement_liberty_v2
-  *
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
-  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  * See the License for the specific language governing permissions and
-  * limitations under the License.
-  *
-  ******************************************************************************
-  */ 
-
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include <stdlib.h> 
 
 /** @addtogroup STM32F3_Discovery_Peripheral_Examples
   * @{
   */
 
-/** @addtogroup SysTick_Example
-  * @{
-  */ 
-
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-GPIO_InitTypeDef GPIO_InitStructure;
-static __IO uint32_t TimingDelay;
+RCC_ClocksTypeDef RCC_Clocks;
+__IO uint32_t TimingDelay = 0;
+__IO uint32_t UserButtonPressed = 0;
+uint8_t currentState = 0;
 
 /* Private function prototypes -----------------------------------------------*/
 void Delay(__IO uint32_t nTime);
+void ToggleLEDsInCircle(void);
+void AllLEDsOff(void);
+void ToggleLEDsHalfPattern(void);
+void ToggleLEDsInCirclePattern(void);
+void ToggleRandomLEDs(void);
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -55,14 +32,11 @@ void Delay(__IO uint32_t nTime);
   */
 int main(void)
 {
-  /*!< At this stage the microcontroller clock setting is already configured, 
-       this is done through SystemInit() function which is called from startup
-       file (startup_stm32f30x.s) before to branch to application main.
-       To reconfigure the default setting of SystemInit() function, refer to
-       system_stm32f30x.c file
-     */     
-  
-  /* Initialize Leds mounted on STM32F3-discovery */
+  /* SysTick end of count event each 10ms */
+  RCC_GetClocksFreq(&RCC_Clocks);
+  SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
+
+  /* Initialize LEDs and User Button on STM32F3-Discovery board */
   STM_EVAL_LEDInit(LED3);
   STM_EVAL_LEDInit(LED4);
   STM_EVAL_LEDInit(LED5);
@@ -72,80 +46,155 @@ int main(void)
   STM_EVAL_LEDInit(LED9);
   STM_EVAL_LEDInit(LED10);
   
-  /* Turn On LED3 */
-  STM_EVAL_LEDOn(LED3);
-  /* Turn On LED7 */
-  STM_EVAL_LEDOn(LED7);
-  /* Turn On LED6 */
-  STM_EVAL_LEDOn(LED6);
-  /* Turn On LED10 */
-  STM_EVAL_LEDOn(LED10);
-  
-  /* Setup SysTick Timer for 1 msec interrupts.
-     ------------------------------------------
-    1. The SysTick_Config() function is a CMSIS function which configure:
-       - The SysTick Reload register with value passed as function parameter.
-       - Configure the SysTick IRQ priority to the lowest value (0x0F).
-       - Reset the SysTick Counter register.
-       - Configure the SysTick Counter clock source to be Core Clock Source (HCLK).
-       - Enable the SysTick Interrupt.
-       - Start the SysTick Counter.
-    
-    2. You can change the SysTick Clock source to be HCLK_Div8 by calling the
-       SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8) just after the
-       SysTick_Config() function call. The SysTick_CLKSourceConfig() is defined
-       inside the stm32f30x_misc.c file.
+  STM_EVAL_PBInit(BUTTON_USER, BUTTON_MODE_EXTI);
 
-    3. You can change the SysTick IRQ priority by calling the
-       NVIC_SetPriority(SysTick_IRQn,...) just after the SysTick_Config() function 
-       call. The NVIC_SetPriority() is defined inside the core_cm0.h file.
+  /* Reset UserButton_Pressed variable */
+  UserButtonPressed = 0x00; 
 
-    4. To adjust the SysTick time base, use the following formula:
-                            
-         Reload Value = SysTick Counter Clock (Hz) x  Desired Time base (s)
-    
-       - Reload Value is the parameter to be passed for SysTick_Config() function
-       - Reload Value should not exceed 0xFFFFFF
-   */
-  if (SysTick_Config(SystemCoreClock / 1000))
-  { 
-    /* Capture error */ 
-    while (1);
-  }
-
+  /* Infinite loop */
   while (1)
   {
-    /* Toggle LED3 */
-    STM_EVAL_LEDToggle(LED3);
-    /* Toggle LED7 */
-    STM_EVAL_LEDToggle(LED7);
-    /* Toggle LED6 */
-    STM_EVAL_LEDToggle(LED6);
-    /* Toggle LED10 */
-    STM_EVAL_LEDToggle(LED10);
-    
-    /* Insert 100 ms delay */
-    Delay(100);
-    
-    /* Toggle LED4 */
-    STM_EVAL_LEDToggle(LED4);
-    /* Toggle LED5 */
-    STM_EVAL_LEDToggle(LED5);
-    /* Toggle LED9 */
-    STM_EVAL_LEDToggle(LED9);
-    /* Toggle LED8 */
-    STM_EVAL_LEDToggle(LED8);
-    
-    /* Insert 150 ms delay */
-    Delay(150);
+    switch (currentState)
+    {
+      case 0:
+        AllLEDsOff();
+        break;
+      case 1:
+        ToggleLEDsInCircle();
+        break;
+      case 2:
+        ToggleLEDsHalfPattern();
+        break;
+      case 3:
+        ToggleLEDsInCirclePattern();
+        break;
+      case 4:
+        ToggleRandomLEDs();
+        break;
+    }
+
+    /* Check if the user button is pressed */
+    if (UserButtonPressed == 0x01)
+    {
+      /* Reset the UserButtonPressed variable */
+      UserButtonPressed = 0x00;
+      
+      /* Change the state */
+      currentState = (currentState + 1) % 5;  // 5 states 
+    }
   }
 }
 
-/**
-  * @brief  Inserts a delay time.
-  * @param  nTime: specifies the delay time length, in milliseconds.
-  * @retval None
-  */
+void AllLEDsOff(void)
+{
+  STM_EVAL_LEDOff(LED3);
+  STM_EVAL_LEDOff(LED4);
+  STM_EVAL_LEDOff(LED5);
+  STM_EVAL_LEDOff(LED6);
+  STM_EVAL_LEDOff(LED7);
+  STM_EVAL_LEDOff(LED8);
+  STM_EVAL_LEDOff(LED9);
+  STM_EVAL_LEDOff(LED10);
+}
+
+void ToggleLEDsInCircle(void)
+{
+  /* LEDs Off */
+  AllLEDsOff();
+
+  /* Toggle LEDs in circle */
+  STM_EVAL_LEDToggle(LED3);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED5);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED7);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED9);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED10);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED8);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED6);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED4);
+  Delay(25);
+}
+
+void ToggleLEDsHalfPattern(void)
+{
+  AllLEDsOff();
+
+  /* Turn on LEDs at positions 3, 5, 7, 9 */
+  STM_EVAL_LEDOn(LED3);
+  STM_EVAL_LEDOn(LED5);
+  STM_EVAL_LEDOn(LED7);
+  STM_EVAL_LEDOn(LED9);
+  
+  Delay(100);
+
+  /* Turn off LEDs at positions 3, 5, 7, 9 */
+  STM_EVAL_LEDOff(LED3);
+  STM_EVAL_LEDOff(LED5);
+  STM_EVAL_LEDOff(LED7);
+  STM_EVAL_LEDOff(LED9);
+
+  /* Turn on LEDs at positions 4, 6, 8, 10 */
+  STM_EVAL_LEDOn(LED4);
+  STM_EVAL_LEDOn(LED6);
+  STM_EVAL_LEDOn(LED8);
+  STM_EVAL_LEDOn(LED10);
+  
+  Delay(100);
+
+  /* Turn off LEDs at positions 4, 6, 8, 10 */
+  STM_EVAL_LEDOff(LED4);
+  STM_EVAL_LEDOff(LED6);
+  STM_EVAL_LEDOff(LED8);
+  STM_EVAL_LEDOff(LED10);
+}
+
+void ToggleLEDsInCirclePattern(void)
+{
+  AllLEDsOff();
+
+  /* Toggle every third LED in circle */
+  STM_EVAL_LEDToggle(LED3);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED7);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED10);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED6);
+  Delay(25);
+  
+  AllLEDsOff();
+  Delay(25);
+
+  /* Toggle every second LED in circle */
+  STM_EVAL_LEDToggle(LED5);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED9);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED8);
+  Delay(25);
+  STM_EVAL_LEDToggle(LED4);
+  Delay(25);
+}
+
+void ToggleRandomLEDs(void)
+{
+  AllLEDsOff();
+
+  /* Toggle random LEDs */
+  for (int i = 0; i < 4; ++i) // Toggle 4 random LEDs
+  {
+    int randomIndex = rand() % 8 + 3; // from 3 to 10 (LED3 to LED10)
+    STM_EVAL_LEDToggle(randomIndex);
+    Delay(10); 
+  }
+}
+
 void Delay(__IO uint32_t nTime)
 { 
   TimingDelay = nTime;
@@ -153,16 +202,23 @@ void Delay(__IO uint32_t nTime)
   while(TimingDelay != 0);
 }
 
-/**
-  * @brief  Decrements the TimingDelay variable.
-  * @param  None
-  * @retval None
-  */
 void TimingDelay_Decrement(void)
 {
   if (TimingDelay != 0x00)
   { 
     TimingDelay--;
+  }
+}
+
+void EXTI0_IRQHandler(void)
+{
+  if (EXTI_GetITStatus(USER_BUTTON_EXTI_LINE) != RESET)
+  {
+    /* Set the UserButtonPressed variable */
+    UserButtonPressed = 0x01;
+
+    /* Clear the EXTI line pending bit */
+    EXTI_ClearITPendingBit(USER_BUTTON_EXTI_LINE);
   }
 }
 
